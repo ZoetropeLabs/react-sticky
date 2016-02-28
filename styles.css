@@ -7,55 +7,29 @@ html, body {
 }
 
 body {
-  text-align: center;
   font-size: 18px;
   font-family: 'Lato', helvetica, sans-serif;
   background-color: #eee;
 }
 
-main {
-  height: 1000px;
-  line-height: 1000px;
-}
-
-header, footer {
+header {
   height: 80px;
   width: 100%;
   line-height: 80px;
-  color: #333;
+  background-color: #333;
   padding: 0 20px;
-}
-
-footer {
-  background-color: #ccc;
-}
-
-header {
-  background: rgba(255,255,255,0.0);
   text-align: center;
-  color: rgba(0,0,0,0);
-  transition: 0.25s background-color ease-in-out, 0.5s color ease-in-out;
+  color: #ffa700;
 }
 
-header.sticky {
-  position: fixed;
-  top: 30px;
-  background: rgba(255,255,255,0.8);
-  color: rgba(0,0,0,1);
-  transition: 0.5s background-color ease-in-out, 0.1s color ease-in-out;
-
+.column {
+  background-color: #fff;
+  border: solid 5px #eee;
 }
 
-.jumbotron h1 {
-  color: #444;
-  font-size: 1.25em;
-}
-
-.jumbotron h1 small {
-  display: block;
-  font-size: 0.5em;
-}
-
-a:hover,a:visited,a:link,a:active {
-  color: #809aa8;
+h3 {
+  text-align: left;
+  background-color: #fff;
+  margin-top: 0;
+  padding: 20px 0;
 }
