@@ -17,36 +17,37 @@
 	<script type="text/babel">
 		class Timeline extends React.Component {
 
-			constructor(props) {
-					super(props);
-					this.state = {
-						years: _.range(2000, new Date().getFullYear() + 1)
-					}
-			}
-
 			render() {
-				let timeline = this.state.years.map((year) => {
+				let timeline = [2000, 2010].map((decade) => {
 					return (
-						<Sticky.Container>
-							<Sticky>
-								<h3>{year}</h3>
+						<Sticky.Container key={decade} style={{zIndex: 4}}>
+							<Sticky style={{zIndex: 3}}>
+								<h2>{decade}s</h2>
 							</Sticky>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
+								{
+									_.range(0,10).map((i) => {
+										return (
+											<Sticky.Container key={decade + i} style={{zIndex: 2}}>
+												<Sticky>
+													<h3>{decade + i}</h3>
+												</Sticky>
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+												</p>
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+												</p>
+											</Sticky.Container>
+										);
+									})
+								}
 						</Sticky.Container>
 					);
 				})
 
 				return (
 					<Sticky.Container>
-						<Sticky style={{zIndex: 10}}>
+						<Sticky style={{zIndex: 5}}>
 							<header>
 								<h1 className="pull-left">&lt;Sticky /&gt; Demo</h1>
 								<div className="pull-right">
