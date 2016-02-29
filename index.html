@@ -55,15 +55,15 @@
 							</header>
 						</Sticky>
 						<div className="container" style={{marginTop: 60}}>
-							<div className="row">
-								<div className="column hidden-sm col-xs-12 col-md-2">
-									<Sticky.Container style={{height: 10000}}>
+							<div className="row-flex row-flex-wrap">
+								<div className="flex-col column hidden-sm col-xs-12 col-md-2">
+									<Sticky.Container style={{height: '100%'}}>
 										<Sticky>
 											<h3>Timeline</h3>
 										</Sticky>
 									</Sticky.Container>
 								</div>
-								<div className="column col-xs-12 col-md-10">
+								<div className="flex-col column col-xs-12 col-md-10">
 									{ timeline }
 								</div>
 							</div>
