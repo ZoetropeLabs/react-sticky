@@ -1,14 +1,14 @@
 react-sticky [![Build Status](https://travis-ci.org/captivationsoftware/react-sticky.svg?branch=master)](https://travis-ci.org/captivationsoftware/react-sticky)
 ============
 
-### [Demo](https://captivationsoftware.github.io/react-sticky)
-
-NOTE: Version 4.0.0 is in progress -- [3.0.0](https://github.com/captivationsoftware/react-sticky/tree/3.0.0)
- was the last stable version.
+NOTE: Version 4.0.0 is in progress and unavailable on npm -- 3.0.0 [source](https://github.com/captivationsoftware/react-sticky/tree/3.0.0)/[demo](http://www.captivationsoftware.com/react-sticky/) was the last stable version.
 
 The most powerful Sticky library available for React!
 
-##### Highlights:
+#### Demos
+  - [Timeline](http://rawgit.com/captivationsoftware/react-sticky/master/examples/timeline/index.html)
+
+#### Highlights
   - Fully-nestable, allowing you to build awesome layouts with familiar syntax
   - Sane defaults so you spend less time configuring
   - Allows multiple Sticky elements on the page at once with compositional awareness!
@@ -31,24 +31,22 @@ app.jsx
 ```js
 import React from 'react';
 import { StickyContainer, Sticky } from 'react-sticky';
+...
 
 class App extends React.Component ({
   render() {
     return (
+      ...
       <StickyContainer>
+        ...
         <Sticky>
           <header>
-            <h1>Million Dollar App Idea</h1>
+            ...
           </header>
         </Sticky>
-        <h3>Reasons to trust me:</h3>
-        <ul>
-          <li>I have great hygeine</li>
-          <li>I signal before most turns</li>
-          ...
-          <li>I once paid for a newspaper subscription to help a kid attend college</li>
-        </ul>
+        ...
       </StickyContainer>
+      ...
     );
   },
 });
@@ -115,11 +113,11 @@ app.jsx
 </StickyContainer>
 ```
 
-The above would result in an element that becomes sticky once its top is greater than or equal to 80px away from the top of the <StickyContainer />.
+The above would result in an element that becomes sticky once its top is greater than or equal to 80px away from the top of the `<StickyContainer />`.
 
 
 #### bottomOffset _(default: 0)_
-Sticky state will be triggered when the bottom of the element is `bottomOffset` pixels from the bottom of the closest <StickyContainer />.
+Sticky state will be triggered when the bottom of the element is `bottomOffset` pixels from the bottom of the closest `<StickyContainer />`.
 
 app.jsx
 ```js
@@ -162,7 +160,7 @@ app.jsx
 
 Note: In the event that `stickyStyle` rules conflict with `style` rules, `stickyStyle` rules take precedence ONLY while sticky state is active.
 
-#### onStickyStateChange
+#### onStickyStateChange _(default: function() {})_
 
 Use the onStickyStateChange prop to fire a callback function when the sticky state changes:
 
