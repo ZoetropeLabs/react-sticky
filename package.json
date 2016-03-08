@@ -2,7 +2,7 @@
   "name": "react-sticky",
   "version": "4.0.0-rc7",
   "description": "Sticky component for React",
-  "main": "/lib/react-sticky.js",
+  "main": "/lib/index.js",
   "scripts": {
     "clean": "rimraf lib dist",
     "transpile": "babel src --loose --out-dir lib",
