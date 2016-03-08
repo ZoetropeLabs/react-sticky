@@ -1,5 +1,3 @@
-src
-dist
 .gitignore
 .npmignore
 .babelrc
